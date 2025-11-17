@@ -142,5 +142,6 @@ python scripts/generate_maps_and_profiles.py
 
 ---
 
-Autor: Tiago Belintani
+Autorea: Autores: Aleksej Kozlakowski Junior, Gabriele da Silva Campos, Michelle Fernandez, Tiago Belintani, Victor Matsuno,  
 Data: 2025
+
