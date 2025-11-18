@@ -1,0 +1,21 @@
+name: birdrec
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - matplotlib
+  - seaborn
+  - pandas
+  - tqdm
+  - numpy
+  - jupyterlab
+  - scikit-learn
+  - umap-learn
+  - hdbscan
+  - networkx
+  - python-igraph
+  - leidenalg
+  - tensorflow
+prefix: /Users/trash/miniconda3/envs/birdrec
