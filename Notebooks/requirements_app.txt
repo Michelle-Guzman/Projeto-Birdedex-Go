@@ -1,0 +1,10 @@
+# Requisitos para Análise e App
+pandas
+numpy
+scikit-learn
+pyarrow
+streamlit
+folium
+streamlit-folium
+pyqrcode
+pypng

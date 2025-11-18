@@ -1,5 +1,5 @@
-# Projeto Birdedex Go
-Projeto de sistema de recomendação de visualização de aves a partir de dados do iNaturalist, com base em múltiplas camadas de informação (ecológica, geográfica e sazonal).
+# Projeto BirdedexGO
+Projeto de sistema de recomendação de visualização de aves a partir de dados do iNaturalist, com base em múltiplas camadas de informação (ecológica, geográfica e sazonal). Ao final, as análises apresentadas são integradas a um aplicativo disponível para os usuários.
 
 # Projeto: Análise de Clusters de Usuários e Perfil Ecológico em São Paulo
 
@@ -10,11 +10,18 @@ Este projeto analisa observações de aves na cidade de São Paulo, agrupa usuá
 ## Estrutura do Repositório
 
 ```
-/data_filtered
-    observations_sao_paulo.csv       # Observações de aves com coordenadas
-/processed
-/scripts
-/figs
+📂 Projeto-Birdedex-Go/
+├── 📂 Notebooks/
+│   ├── 📄 projeto_disciplina.ipynb # Descrição das análises realizadas
+│   ├── 📂 data_filtered/
+│   │   └── 📄 observations_sao_paulo.csv       # Observações de aves com coordenadas
+│   ├── 📂 processed/
+│   │   └── 📄 user_clusters_kmeans_final.csv   # Arquivo final da clusterização de usuários│
+├── 📂 app/
+│   ├── 📄 app.py                                  # Script do aplicativo
+│   └── 📂 artifacts/                              
+│
+└── 📄 README.md 
     
 ```
 
@@ -97,7 +104,59 @@ python -m pip list | grep -E "pandas|numpy|scikit|umap|hdbscan|networkx|tensorfl
 
 ---
 
-Autores: Aleksej Kozlakowski Junior, Gabriele da Silva Campos, Gabriele da Silva Campos, Tiago Belintani, Victor Matsuno,  
+## Executando o Aplicativo BirdedexGO
+
+Existem duas maneiras de interagir com o nosso projeto: acessando o site público ou rodando o aplicativo localmente no seu computador.
+
+### Opção 1: Acessar o Site
+A forma mais fácil e rápida de usar o BirdedexGO é através do link do nosso site público, hospedado no Streamlit Community Cloud.
+
+➡️ **Acesse o aplicativo aqui:** [https://seu-link-para-o-app.streamlit.app/](https://seu-link-para-o-app.streamlit.app/) *
+
+---
+
+### Opção 2: Rodar Localmente no seu computador
+Se você deseja executar o código na sua própria máquina para explorar ou modificar, siga os passos abaixo.
+
+#### Pré-requisitos
+- [Python 3.10+](https://www.python.org/downloads/)
+- [Git](https://git-scm.com/downloads/)
+
+#### Passo 1: Clone o Repositório
+Abra seu terminal e execute o comando abaixo para baixar todos os arquivos do projeto:
+```bash
+git clone https://github.com/Michelle-Guzman/Projeto-Birdedex-Go.git
+cd Projeto-Birdedex-Go
+```
+#### Passo 2: Instale as Dependências
+Navegue até a pasta Notebooks e instale todas as bibliotecas necessárias para a análise e para o aplicativo com um único comando:
+
+```bash
+cd Notebooks
+pip install -r requirements_app.txt
+```
+
+#### Passo 3: Prepare os Dados (Executar uma única vez)
+Este passo crucial processa os dados brutos e gera os arquivos otimizados (artefatos) que o aplicativo usará. Certifique-se de que você ainda está na pasta Notebooks antes de executar o comando.
+
+```bash
+python prepare_data_app.py
+```
+
+Aguarde a conclusão. Ao final, você verá uma mensagem de sucesso indicando que os artefatos foram salvos na pasta app/artifacts/.
+Passo 4: Rode o Aplicativo
+Agora que os dados estão prontos, navegue até a pasta do aplicativo e inicie o servidor.
+
+```bash
+# Se você está na pasta 'Notebooks', volte para a raiz do projeto e entre em 'app'
+# cd ../app
+streamlit run app.py
+```
+
+Seu navegador abrirá automaticamente o aplicativo BirdedexGO!
+---
+
+Autores: Aleksej Kozlakowski Junior, Gabriele da Silva Campos, Michelle Guzman de Fernandes, Tiago Belintani, Victor Matsuno.  
 Data: 2025
 
 
