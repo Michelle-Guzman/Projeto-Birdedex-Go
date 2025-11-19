@@ -8,3 +8,4 @@ streamlit-folium
 pyqrcode
 pypng
 pyarrow==16.1.0
+fastparquet
