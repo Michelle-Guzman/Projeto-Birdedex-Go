@@ -117,8 +117,8 @@ cd Projeto-Birdedex-Go
 #### Dependências
 
 ```bash
-cd Notebooks
-pip install -r requirements_app.txt
+cd app
+pip install -r requirements.txt
 ```
 
 #### Preparação de Dados
@@ -131,8 +131,6 @@ python prepare_data_app.py
 #### Executando o aplicativo
 
 ```bash
-# Se você está na pasta 'Notebooks', volte para a raiz do projeto e entre em 'app'
-# cd ../app
 streamlit run app.py
 ```
 
