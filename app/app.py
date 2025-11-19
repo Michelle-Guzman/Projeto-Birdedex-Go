@@ -19,9 +19,9 @@ def carregar_artefatos():
     """Carrega todos os dados da pasta artifacts local."""
     try:
         base_path = "/app/artifacts/"
-        df_obs = pd.read_parquet(base_path + "observations_processed.parquet", engine='fastparquet')
-        perfil_cluster = pd.read_parquet(base_path + "perfil_especies_cluster.parquet", engine='fastparquet')
-        sazonalidade = pd.read_parquet(base_path + "sazonalidade_especies.parquet", engine='fastparquet')
+        df_obs = pd.read_parquet(base_path + "observations_processed.parquet")
+        perfil_cluster = pd.read_parquet(base_path + "perfil_especies_cluster.parquet")
+        sazonalidade = pd.read_parquet(base_path + "sazonalidade_especies.parquet")
         mat_cluster_especie = pd.read_csv(base_path + "mat_cluster_especie.csv", index_col=0)
         sim_clusters = pd.read_csv(base_path + "sim_clusters.csv", index_col=0)
         sim_clusters.columns = sim_clusters.columns.astype(int)
