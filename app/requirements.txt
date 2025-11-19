@@ -1,10 +1,10 @@
 # Requisitos para Análise e App
-pandas
+pandas==2.2.2
+streamlit
 numpy
 scikit-learn
-pyarrow
-streamlit
 folium
 streamlit-folium
 pyqrcode
 pypng
+pyarrow==16.1.0
