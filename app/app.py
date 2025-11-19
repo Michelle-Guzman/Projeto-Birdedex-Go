@@ -18,7 +18,7 @@ st.set_page_config(page_title="BirdedexGO", page_icon="🐦", layout="wide")
 def carregar_artefatos():
     """Carrega todos os dados da pasta artifacts local."""
     try:
-        base_path = "/app/artifacts/"
+        base_path = "Projeto-Birdedex-Go/app/artifacts/"
         df_obs = pd.read_parquet(base_path + "observations_processed.parquet")
         perfil_cluster = pd.read_parquet(base_path + "perfil_especies_cluster.parquet")
         sazonalidade = pd.read_parquet(base_path + "sazonalidade_especies.parquet")
